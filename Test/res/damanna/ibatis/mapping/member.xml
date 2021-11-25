@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="member">
+	<insert id="insertMember" parameterClass="memberVo">
+		INSERT INTO MEMBER (MEMBER_ID, CITY_CODE, MEMBER_PW, MEMBER_NM, MEMBER_BIR, MEMBMER_MAIL, MEMBER_HP, MEMBER_GEN
+                  , MEMBER_IMG1, MEMBER_IMG2, MEMBER_HOBBY, PROFILE_INTRO, MEMBER_INSTA, PROFILE_MUSIC, MATCH_TYPE)
+       VALUES (#memberId#, #cityCode#, #memberPw#, #memberNm#, TO_DATE(#memberBir#, 'YYYYMMDD'), #membmerMail#, #memberHp#, #memberGen#,
+               #memberImg1#, #memberImg2#, #memberHobby#, #profileIntro#, #memberInsta#, #profileMusic#, #matchType#);
+	</insert>
+</sqlMap>
